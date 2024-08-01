@@ -113,7 +113,7 @@ const OrdenServicio = ({ mode, onAction, infoDefault, titleMode }) => {
         disable: {
           cantidad: isDelivery ? true : mode !== "UPDATE" ? false : true,
           item: true,
-          descripcion: mode === "UPDATE",
+          descripcion: isDelivery,
           monto: mode === "UPDATE",
           descuentoManual: mode === "UPDATE",
           total:

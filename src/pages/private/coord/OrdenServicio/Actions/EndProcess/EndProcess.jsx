@@ -260,7 +260,7 @@ const EndProcess = ({ IdCliente, onClose }) => {
                 Anular
               </button>
             ) : null}
-            {/* {infoCliente.estadoPrenda !== "entregado" ? (
+            {infoCliente.estadoPrenda !== "entregado" ? (
               <button
                 type="button"
                 className="btn-exm"
@@ -272,7 +272,7 @@ const EndProcess = ({ IdCliente, onClose }) => {
               >
                 Editar
               </button>
-            ) : null} */}
+            ) : null}
             {infoCliente.dateEntrega.fecha === DateCurrent().format4 &&
             infoCliente.estadoPrenda === "entregado" ? (
               <button
