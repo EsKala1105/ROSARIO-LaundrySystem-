@@ -1,0 +1,278 @@
+.content-asistencias {
+  max-width: 1200px;
+  margin: auto;
+  .head-i {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 0 20px;
+    .left-ih {
+      display: flex;
+      gap: 25px;
+      h1 {
+        text-align: center;
+        margin: auto;
+      }
+      .blocks-ih {
+        display: flex;
+        gap: 20px;
+        .block {
+          display: grid;
+          place-items: center;
+          border: 1px solid silver;
+          border-radius: 10px;
+          .title-b {
+            border-bottom: 1px solid silver;
+            padding: 0 10px;
+            background: #d8defe;
+            font-weight: 600;
+            color: #575757;
+          }
+          .info-b {
+            padding: 5px;
+            font-weight: 600;
+            color: #575757;
+          }
+        }
+      }
+    }
+  }
+  .personal-info {
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    .info-form {
+      max-width: 300px;
+      min-width: 250px;
+      height: max-content;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      border: 1px solid #7f7e7e;
+      padding: 20px 0;
+      hr {
+        width: 100%;
+      }
+      .i-box {
+        width: 100%;
+        display: grid;
+        place-items: center;
+        gap: 10px;
+        button {
+          width: 100%;
+          max-width: 200px;
+          margin: 10px;
+        }
+      }
+      .input-item {
+        position: relative;
+        width: calc(100% - 40px);
+        button {
+          margin: 0;
+        }
+        .input-date {
+          label {
+            margin-bottom: 0;
+          }
+          .hour-date {
+            position: relative;
+            height: 36px;
+            width: max-content;
+            font-size: 16px;
+            display: block;
+            text-align: end;
+            padding: 2px;
+            border: 2px solid silver;
+            select {
+              outline: none;
+              color: #767676;
+              padding-right: 0;
+              text-align: center;
+              &:focus {
+                outline: none;
+                background-color: rgb(217, 235, 255);
+              }
+              option {
+                text-align: center;
+                background-color: #eee;
+                color: #333;
+                padding-right: 0;
+              }
+            }
+            .react-time-picker {
+              padding-right: 0;
+            }
+            .react-time-picker__inputGroup__amPm {
+              width: 30px;
+              height: 20px;
+              padding: 3px 0;
+              line-height: 0.8;
+            }
+            .react-time-picker__inputGroup__amPm {
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              appearance: none;
+            }
+            .react-time-picker__wrapper {
+              border: none;
+            }
+            .react-time-picker__inputGroup {
+              flex-grow: 0;
+              padding: 0 0 0 7px;
+            }
+          }
+        }
+      }
+      .time-asis {
+        width: calc(100% - 35px);
+        display: flex;
+        justify-content: space-between;
+        .input-item {
+          width: max-content;
+        }
+      }
+    }
+    .list-personal {
+      display: grid;
+      width: max-content;
+      height: max-content;
+      gap: 10px;
+
+      $wBExport: 30px;
+      $wBspace: 175px;
+      .head-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .button_wrapper {
+          position: relative;
+          align-items: center;
+          width: $wBspace;
+          height: 40px;
+          border-radius: 10rem;
+          background-color: #3a9950;
+          font-size: 13px;
+          color: white;
+          border: none;
+          display: flex;
+          letter-spacing: 0.1em;
+          font-weight: 200;
+          overflow: hidden;
+          box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25);
+          z-index: 10;
+          padding: 5px;
+          margin: 0;
+          margin-top: 10px;
+          cursor: pointer;
+          transition: 300ms;
+          &:hover {
+            transform: scale(110%);
+            &::before {
+              padding-top: 0px !important;
+            }
+          }
+
+          &::before {
+            content: "DESCARGANDO";
+            position: absolute;
+            background-color: white;
+            height: $wBExport;
+            width: $wBExport;
+            color: #3a9950;
+            display: flex;
+            padding: 0 10px;
+            left: 4px;
+            border-radius: 10rem;
+            align-items: center;
+            overflow: hidden;
+            padding-left: 10px;
+            padding-top: 3px;
+            box-sizing: border-box;
+          }
+          &::after {
+            content: "Exportar";
+            height: 100%;
+            border-radius: 10rem;
+            display: flex;
+            align-items: center;
+            margin: auto;
+          }
+          .icon {
+            position: absolute;
+            display: flex;
+            overflow: hidden;
+            width: $wBExport;
+            height: $wBExport;
+            border-radius: 100%;
+
+            background-color: white;
+            color: #3a9950;
+
+            > svg {
+              padding: 5px;
+              transition: 300ms;
+            }
+          }
+        }
+        .loading {
+          &:before {
+            animation: reveal 1s ease-in-out 300ms forwards;
+          }
+          .icon {
+            left: 5px;
+            animation: loadIcon 1s ease-in-out 300ms forwards;
+            > svg {
+              transform: rotatez(-90deg);
+            }
+          }
+        }
+        @keyframes loadIcon {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc($wBspace - 40px));
+            left: 0;
+          }
+        }
+        @keyframes reveal {
+          0% {
+            width: $wBExport;
+            left: 5px;
+          }
+          99.99% {
+            //left: 0;
+          }
+          100% {
+            left: 5px;
+            right: 5px;
+            width: calc(100% - 10px);
+          }
+        }
+        @media screen and (max-width: 500px) {
+          .button_wrapper {
+            transform: scale(80%);
+            &:hover {
+              transform: scale(90%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content-asistencias {
+    min-width: 300px;
+    .personal-info {
+      display: grid !important;
+      place-items: center;
+      .list-personal {
+        width: 100%;
+      }
+    }
+  }
+}

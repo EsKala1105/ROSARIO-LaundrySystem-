@@ -1,0 +1,128 @@
+.content-productos {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  width: max-content;
+  margin: auto;
+  .mantine-1uz2t49 {
+    scrollbar-width: none;
+  }
+  .sub-row {
+    height: 130px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    .inventario {
+      display: flex;
+      place-items: center;
+      gap: 50px;
+      flex-flow: wrap;
+      place-content: center;
+      .stock-table {
+        height: 130px;
+        overflow-y: auto; // Agrega una barra de desplazamiento vertical si el contenido excede la altura máxima
+        border-collapse: collapse; // Fusiona los bordes de las celdas de la tabla
+
+        th,
+        td {
+          padding: 0px 10px;
+          border: 1px solid #ddd; // Añade bordes a las celdas
+          font-size: 13px;
+          &:nth-child(2) {
+            text-align: center;
+          }
+        }
+
+        th {
+          background-color: #f2f2f2; // Color de fondo para las celdas de encabezado
+        }
+
+        tr:nth-child(even) {
+          background-color: #f2f2f2; // Alterna el color de fondo para las filas pares
+        }
+
+        tr:hover {
+          background-color: #ddd; // Cambia el color de fondo al pasar el cursor sobre las filas
+        }
+
+        td {
+          white-space: nowrap; // Evita que el texto se envuelva dentro de las celdas
+        }
+      }
+      .last-stock {
+        background-color: #d09f55 !important;
+        color: #fff;
+      }
+    }
+  }
+
+  .actions-p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    $wButton: 100px;
+    $hButton: 45px;
+    .b-add-p {
+      width: max-content;
+      height: min-content;
+      font-family: "Nunito", sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      background: #6582ff;
+      border-radius: 30px;
+      border: none;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px 15px;
+      &:hover,
+      &:focus {
+        background: #6582ff;
+        color: #fff;
+      }
+      &:hover::before,
+      &:focus::before {
+        animation: none;
+        display: none;
+      }
+      &::after {
+        content: "";
+        border-radius: 1000px;
+        width: 97%;
+        height: 97%;
+        border: 2px solid #4868f9;
+        box-shadow: 0 0 20px #6582ff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: infinite ring 2s;
+      }
+      &:hover::after,
+      &:focus::after {
+        opacity: 1;
+      }
+      @keyframes ring {
+        0%,
+        100% {
+          box-shadow: 0px 0px 40px #6582ff;
+        }
+        50% {
+          box-shadow: 0px 0px 0px;
+        }
+      }
+    }
+  }
+}
+.portal-action-producto {
+  display: grid;
+  gap: 10px;
+  padding: 5px 33px 0px 9px;
+  .action {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

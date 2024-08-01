@@ -1,0 +1,115 @@
+.content-reporte-diario {
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  .table-container {
+    padding-top: 10px;
+    table {
+      margin: 10px auto;
+
+      tr {
+        position: relative;
+        display: grid;
+      }
+      thead {
+        tr {
+          th {
+            background: #5b81ea;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+      }
+
+      tbody {
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        tr {
+          &:nth-child(even) {
+            background: #f3f1f1cc;
+          }
+          &:hover {
+            background: #5161ce !important;
+            color: #ffffff !important;
+          }
+          td {
+            position: relative;
+            padding: 10px 5px;
+            border: 1px solid #4672ea79;
+            text-align: center;
+            font-size: 14px;
+            vertical-align: top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .action-end {
+      width: 200px;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      margin: 10px;
+      button {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        margin: auto;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        outline: none;
+        cursor: pointer;
+        background: #5b81ea;
+        overflow: hidden;
+        transition: 0.6s;
+        color: #fff;
+        border-color: #3868eb;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          height: 100%;
+          filter: blur(30px);
+          opacity: 0.4;
+          transition: 0.6s;
+        }
+
+        &:before {
+          width: 60px;
+          background: rgba(255, 255, 255, 0.6);
+          transform: translateX(-130px) skewX(-45deg);
+        }
+
+        &:after {
+          width: 30px;
+          background: rgba(255, 255, 255, 0.6);
+          transform: translateX(-130px) skewX(-45deg);
+        }
+
+        &:hover:before,
+        &:hover:after {
+          opacity: 0.6;
+          transform: translateX(320px) skewX(-45deg);
+        }
+
+        &:hover {
+          color: #f2f2f2;
+          background: #44df6b;
+        }
+      }
+    }
+  }
+}

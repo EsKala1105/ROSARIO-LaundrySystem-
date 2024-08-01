@@ -1,0 +1,71 @@
+.info-pago {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: max-content auto;
+  .title {
+    padding: 0 5px;
+  }
+  .body {
+    border-radius: 20px;
+    border: solid 2px silver;
+    width: max-content;
+    min-width: 268px;
+    padding: 20px 10px;
+    height: max-content;
+    position: relative;
+    display: grid;
+    padding-top: 10px;
+    .f-Pay {
+      display: grid;
+      gap: 10px;
+      position: relative;
+      .content-sb {
+        position: relative;
+        width: 200px;
+        .input-pay {
+          display: grid;
+          gap: 5px;
+          label {
+            padding-left: 10px;
+            font-size: 19px;
+            color: #5e5e5e;
+            font-weight: bolder;
+          }
+          .btn-switch {
+            background: transparent;
+            width: min-content;
+            border: none;
+            border-radius: 50px;
+            padding: 0;
+          }
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 0 10px;
+          position: absolute;
+          right: -25px;
+          outline: none;
+          user-select: none;
+        }
+        .ico-efect {
+          bottom: -8px;
+        }
+        .ico-tranf {
+          bottom: 4px;
+        }
+        .ico-card {
+          bottom: 5px;
+        }
+      }
+      .estado-pago {
+        border: 1px solid #777;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        color: #555454;
+      }
+    }
+  }
+}

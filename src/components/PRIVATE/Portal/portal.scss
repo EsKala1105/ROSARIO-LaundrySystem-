@@ -1,0 +1,68 @@
+.portal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); // Fondo negro con opacidad
+  z-index: 10; // Asegúrate de que este sea menor que el z-index de .portal-container
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.portal-exit-active {
+  opacity: 0; // Desvanece a opacidad 0
+}
+
+.portal-enter-active {
+  opacity: 1; // Anima a opacidad completa
+}
+
+.portal-container {
+  min-width: 330px;
+  max-width: 672px;
+  max-height: 650px;
+  width: max-content;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+  @media only screen and (max-height: 500px) {
+    height: 90%;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  .close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    fill: #616161;
+    width: 3rem;
+    height: 3rem;
+    z-index: 1;
+    &:hover,
+    &:focus {
+      fill: #2260ff;
+    }
+  }
+
+  .content {
+    overflow: hidden; // Contenido interno no desbordará
+    width: 100%; // Ocupa todo el espacio disponible
+    height: 100%; // Ocupa todo el espacio disponible
+  }
+}

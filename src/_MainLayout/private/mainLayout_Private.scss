@@ -1,0 +1,121 @@
+.principal_container_private {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow: hidden;
+  .body_pcp {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    overflow: auto;
+  }
+  .mode-admin {
+    top: 112.5px !important;
+  }
+  .mode-user {
+    top: 62.5px !important;
+  }
+
+  $sizeBtnF: 40px;
+  $margenBottom: 20px;
+  .btn-floating {
+    user-select: none;
+    width: 143px;
+    height: $sizeBtnF;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 50px auto;
+    right: -95px !important;
+    transition: all 0.3s ease; /* Agregamos una transición */
+    z-index: 3;
+    &:hover {
+      right: 0 !important;
+    }
+    .ico-toggle {
+      width: 50px;
+      height: 45px;
+      border-radius: 10px 0 0 10px;
+      border: none;
+
+      i {
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+    button {
+      height: 45px;
+      border: none;
+
+      color: #fff;
+    }
+    .btn-gasto {
+      background: rgb(242, 123, 123);
+      &:hover {
+        background: rgb(234, 60, 60);
+      }
+    }
+    .btn-informe {
+      background: #4a71fcd4;
+      &:hover {
+        background: #0b3df2d4;
+      }
+    }
+  }
+  .expanded {
+    right: 0 !important;
+  }
+
+  #add-gasto {
+    bottom: calc(($sizeBtnF + $margenBottom) + 15px);
+    .ico-toggle {
+      background: rgb(242, 123, 123);
+    }
+  }
+
+  #show-informe {
+    bottom: $margenBottom;
+    .ico-toggle {
+      background: #4a71fcd4;
+    }
+  }
+}
+.space-total {
+  grid-template-rows: 1fr !important;
+}
+
+.content-message-general {
+  height: 429px;
+  display: grid;
+  place-items: center;
+  .body-ms {
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    .logo {
+      .ico {
+        width: 150px;
+      }
+    }
+    .header-mg {
+      text-align: center;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .principal_container_private {
+    .body_pcp {
+      top: 62.5px !important;
+    }
+  }
+}

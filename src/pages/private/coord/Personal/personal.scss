@@ -1,0 +1,119 @@
+.content-personal {
+  max-width: 1200px;
+  margin: auto;
+  h1 {
+    text-align: center;
+  }
+  .body-personal {
+    display: grid;
+    grid-template-columns: min-content auto;
+    max-width: 1200px;
+    margin: auto;
+
+    .container-mantine {
+      height: 100%;
+      padding: 10px;
+      display: grid;
+      grid-template-rows: max-content auto;
+      .action-personal {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+      }
+      .list-card-asistencia {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 20px;
+        justify-content: center;
+
+        .card-personal {
+          width: 250px;
+          border: 1px solid #d3d3d3;
+          border-radius: 20px;
+          display: grid;
+          gap: 10px;
+          height: max-content;
+          grid-template-rows: min-content min-content auto;
+          background: #fff;
+          &:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          }
+          .title {
+            padding: 5px;
+            overflow: hidden;
+            h1 {
+              text-align: center;
+              padding: 5px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .accion {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            button {
+              border-radius: 10px;
+              border: 1px solid silver;
+              padding: 10px;
+              &:hover {
+                background: #ffffff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+              }
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+          .body {
+            padding: 10px;
+            .extra-info {
+              background: #ffe597;
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+              padding: 10px;
+              .info-i {
+                .info-table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  margin-top: 5px;
+                  tr {
+                    td {
+                      font-weight: 600;
+                      // font-size: $sText;
+                      color: #575757;
+                      font-size: 3.8mm;
+                      text-align: left;
+                      padding: 0;
+                      hr {
+                        margin: 0;
+                      }
+
+                      &:first-child {
+                        width: min-content;
+                        font-weight: 800;
+                        color: #575757;
+                      }
+                    }
+                  }
+                }
+                .title-bd {
+                  font-weight: 800;
+                  color: #575757;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .total-sp {
+      grid-template-rows: 1fr !important;
+    }
+  }
+}

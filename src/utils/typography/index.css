@@ -1,0 +1,9 @@
+  @font-face {
+    font-family: 'Arvo';
+    src: url('./Arvo/Arvo-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/Roboto-Regular.ttf') format('truetype');
+  }

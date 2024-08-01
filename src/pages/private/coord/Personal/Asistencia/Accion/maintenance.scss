@@ -1,0 +1,86 @@
+.action-asistencia {
+  min-width: 300px;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  .input-item {
+    width: calc(100% - 35px);
+    position: relative;
+  }
+  .mantine-Radio-radio {
+    display: block !important;
+  }
+  .content-hour {
+    width: min-content;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    align-items: center;
+    position: relative;
+    .date-dh {
+      position: relative;
+      .hour-date {
+        position: relative;
+        width: calc(100% + 50px);
+        height: 36px;
+        font-size: 16px;
+        display: block;
+        text-align: end;
+        padding: 2px;
+        border: 2px solid silver;
+        select {
+          outline: none;
+          color: #767676;
+          padding-right: 0;
+          text-align: center;
+          &:focus {
+            outline: none;
+            background-color: rgb(217, 235, 255);
+          }
+          option {
+            text-align: center;
+            background-color: #eee;
+            color: #333;
+            padding-right: 0;
+          }
+        }
+        .react-time-picker {
+          padding-right: 0;
+        }
+        .react-time-picker__inputGroup__amPm {
+          width: 30px;
+          height: 20px;
+          padding: 3px 0;
+          line-height: 0.8;
+        }
+        .react-time-picker__inputGroup__amPm {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+        }
+        .react-time-picker__wrapper {
+          border: none;
+        }
+        .react-time-picker__inputGroup {
+          flex-grow: 0;
+          padding: 0 0 0 7px;
+        }
+      }
+      .accion-id {
+        display: flex;
+        position: absolute;
+        right: -45px;
+        top: 1px;
+        margin: 6px;
+        gap: 10px;
+        .day-date {
+        }
+      }
+    }
+    .ico-req {
+      right: -83px !important;
+    }
+    label {
+      margin-bottom: 0;
+    }
+  }
+}

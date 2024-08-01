@@ -1,0 +1,105 @@
+.content-to-print {
+  margin: auto;
+  width: max-content;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  place-items: center;
+  .action-to-print {
+    display: flex;
+    gap: 25px;
+    place-items: center;
+    .btn-imprimir {
+      position: relative;
+      height: 65px;
+      width: 130px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      outline: none;
+      cursor: pointer;
+      background: #5b81ea;
+      overflow: hidden;
+      transition: 0.6s;
+      color: #fff;
+      border-color: #3868eb;
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        filter: blur(30px);
+        opacity: 0.4;
+        transition: 0.6s;
+      }
+      &:before {
+        width: 60px;
+        background: rgba(255, 255, 255, 0.6);
+        transform: translateX(-130px) skewX(-45deg);
+      }
+      &:after {
+        width: 30px;
+        background: rgba(255, 255, 255, 0.6);
+        transform: translateX(-130px) skewX(-45deg);
+      }
+      &:hover:before,
+      &:hover:after {
+        opacity: 0.6;
+        transform: translateX(320px) skewX(-45deg);
+      }
+      &:hover {
+        color: #f2f2f2;
+        background: #44df6b;
+      }
+    }
+    .send-whatsapp {
+      display: flex;
+      border: 1px solid #42a656;
+      border-radius: 10px;
+      .btn-send-whatsapp {
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+        width: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .app {
+        background: #15d75b;
+      }
+      .info-cel {
+        display: grid;
+        margin: auto;
+
+        height: 52.5px;
+        border-left: none;
+        border-radius: 0 10px 10px 0;
+        width: 150px;
+        label {
+          padding-left: 10px;
+          font-size: 14px;
+          height: 15px;
+        }
+        input {
+          padding-left: 5px;
+          margin-left: 10px;
+          height: 25px;
+          width: 120px;
+        }
+      }
+    }
+  }
+  .actions {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 10px;
+  }
+}

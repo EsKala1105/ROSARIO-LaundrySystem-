@@ -1,0 +1,49 @@
+.content-usuario {
+  display: grid;
+  width: max-content;
+  gap: 10px;
+  margin: auto;
+
+  @media (max-width: 800px) {
+    width: 90% !important;
+    min-width: 300px;
+  }
+}
+
+.actions-ajuste-usuario {
+  display: flex;
+  gap: 10px;
+  place-items: center;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px 9px 10px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #6d6d6d;
+    border-radius: 5px;
+
+    i {
+      font-size: 1.5em;
+      color: #464646;
+      cursor: pointer;
+    }
+  }
+  .btn-edit {
+    &:hover {
+      background: #efaf48;
+      i {
+        color: #fff;
+      }
+    }
+  }
+  .btn-delete {
+    &:hover {
+      background: #f88888;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}

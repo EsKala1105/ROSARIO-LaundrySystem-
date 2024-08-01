@@ -1,0 +1,47 @@
+.action-tipo-gasto {
+  width: max-content;
+  padding: 20px;
+  border-radius: 10px;
+  h1 {
+    font-size: 20px;
+    color: #6b6b6b;
+    text-align: center;
+  }
+  .info-tg {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    gap: 20px;
+    .body-tg {
+      display: grid;
+      .col-tg {
+        min-width: 250px;
+        padding: 10px;
+        width: 95%;
+        display: grid;
+        height: max-content;
+        .inp-tg {
+          position: relative;
+        }
+        .i-state {
+          margin: 10px 0;
+          label {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .b-action {
+      width: 300px;
+      margin: auto;
+    }
+    .a-edit {
+      background: #e68422 !important;
+    }
+    .a-add {
+      background: #228be6 !important;
+    }
+    .a-cancelar {
+      background: #f47d72 !important;
+    }
+  }
+}

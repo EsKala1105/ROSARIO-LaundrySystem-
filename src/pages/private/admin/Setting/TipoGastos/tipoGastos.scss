@@ -1,0 +1,33 @@
+.content-tipo-gasto {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  width: max-content;
+  margin: auto;
+  .mantine-1uz2t49 {
+    scrollbar-width: none;
+  }
+
+  .actions-s {
+    width: 100%;
+    h1 {
+      margin: auto;
+    }
+  }
+  .body-infomation {
+    display: flex;
+    gap: 30px;
+    padding: 10px 5px;
+  }
+}
+
+.portal-action-tipo-gastos {
+  display: grid;
+  gap: 20px;
+  padding: 5px 33px 0px 9px;
+  .action {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,185 @@
+.action-edit-p {
+    width: 70vw;
+    max-width: 600px;
+    height: 80vh;
+    max-height: 460px;
+    display: grid;
+    grid-template-rows: min-content auto;
+    h1 {
+        color: #5e5e5e;
+        font-size: 20px;
+        text-align: center;
+        margin: 10px;
+        margin-top: 0;
+        .name-pr {
+            color: #77bd87;
+            text-transform: uppercase;
+        }
+    }
+    .be-p {
+        display: grid;
+        grid-template-columns: 315px calc(100% - 315px);
+        gap: 20px;
+        h2 {
+            font-size: 15px;
+            color: #5e5e5e;
+        }
+        .current-stock {
+            color: #7785bd;
+            font-weight: 700;
+        }
+        .inp-p {
+            position: relative;
+            width: calc(100% - 30px);
+        }
+        .list-bar-stock {
+            width: 100%;
+            max-height: 100%;
+            display: grid;
+            overflow: hidden;
+            .ca-stock {
+                display: grid;
+                grid-template-rows: min-content min-content auto min-content;
+                .table-wrapper {
+                    padding: 10px 0;
+
+                    table {
+                        max-width: 100%;
+                        height: 100%;
+                        table-layout: fixed;
+                        margin: auto;
+                        border-collapse: collapse;
+                        border: 1px solid #d3d3d3; // Gris suave
+                    }
+
+                    tr {
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: 87px 50px 125px 50px;
+                    }
+
+                    th,
+                    td {
+                        font-size: 13px;
+                        padding: 5px;
+                        text-align: center;
+                        border-bottom: 1px solid #d3d3d3; // Bordes sutilesat: right;
+                    }
+
+                    thead {
+                        background: #5e5e5e; // Gris un poco más oscuro para el encabezado
+                        color: #f9f9f9;
+                        th {
+                            font-weight: bold;
+                        }
+                    }
+
+                    tbody {
+                        height: 100%;
+                        overflow: auto;
+                        display: block;
+                        width: 100%;
+                        scrollbar-width: thin; // Scrollbar más elegante
+                        scrollbar-color: #d3d3d3 #f9f9f9; // Colores del scrollbar
+                        tr {
+                            &:hover {
+                                background-color: #f2f2f2; // Efecto hover
+                            }
+                        }
+                    }
+
+                    // Personalización de botones y colores
+                    .plus i {
+                        color: #49e1a2;
+                    }
+                    .minus i {
+                        color: #e14949;
+                    }
+                    .tColorAdd {
+                        background: #49e1a2;
+                    }
+                    .tColorDel {
+                        background: #e14949;
+                    }
+                }
+                .actions-stock {
+                    margin: auto;
+                }
+            }
+
+            .change-stock {
+                padding: 10px;
+                height: min-content;
+                border: 1px solid silver;
+                display: grid;
+                .head-i {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h1 {
+                        margin: 0 !important;
+                    }
+                    .b-cancelar {
+                        background: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        padding: 0;
+                        border: none;
+                        outline: none;
+                        &:hover {
+                            .ico-cancel {
+                                fill: #e14949;
+                            }
+                        }
+                        .ico-cancel {
+                            fill: #585858;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .new-stock {
+                    // margin: auto;
+                    margin-top: 10px;
+                    padding: 3px 7px;
+                    border: 1px solid silver;
+                    width: max-content;
+                    span {
+                        color: #ff893b;
+                    }
+                }
+
+                input[type="radio"] {
+                    display: block !important;
+                }
+                .motv {
+                    display: block;
+                }
+                .b-update-stock {
+                    width: 80%;
+                    margin: 10px auto;
+                    // background-color: #e39939;
+                }
+            }
+        }
+        .action-i-product {
+            width: 95%;
+            .info-p {
+                padding: 0 10px;
+                width: 80%;
+                display: grid;
+                margin: auto;
+                .i-state {
+                    label {
+                        font-size: 13px;
+                    }
+                }
+            }
+            button {
+                width: 80%;
+                margin: 20px auto;
+            }
+        }
+    }
+}

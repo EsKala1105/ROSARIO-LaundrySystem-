@@ -1,0 +1,153 @@
+@import "./utils/typography/index.css";
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: #676666;
+}
+
+input {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.mantine-ionxj9 {
+  right: unset;
+}
+
+.mantine-1n3zr08 {
+  justify-content: flex-start !important;
+}
+
+.mantine-a8q0fx {
+  zoom: 142% !important;
+}
+
+/* Para el calendario */
+.mantine-1ejqehl,
+.mantine-16higcy {
+  position: relative;
+}
+
+.mantine-15fwk36 {
+  width: 215px;
+}
+.mantine-1sd8r2y {
+  width: min-content;
+  /* left: 0px !important; */
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #00a0e3;
+  /* SWITCH */
+  --switches-bg-color: goldenrod;
+  --switches-label-color: white;
+  --switch-bg-color: white;
+  --switch-text-color: goldenrod;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loading-general {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+}
+
+/* Aumenta tamaño de Dropdown de Select de mantain */
+/* .mantine-Select-dropdown {
+  width: max-content !important;
+} */
+
+/* .mantine-Select-dropdown {
+} */
+
+.mantine-Paper-root::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.mantine-MultiSelect-values {
+  margin: 0 !important;
+}
+
+/* Estilo para el scroll */
+::-webkit-scrollbar {
+  width: 5px; /* Ancho del scroll */
+  height: 5px;
+}
+
+/* Estilo para el riel del scroll */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del riel */
+}
+
+/* Estilo para el mango del scroll */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del mango del scroll */
+  border-radius: 10px; /* Bordess redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del mango al pasar el cursor sobre él */
+}
+
+.mantine-Modal-content {
+  min-width: 200px;
+  max-width: 100%;
+}
+.mantine-Modal-header {
+  position: relative;
+  /* justify-content: center; */
+  width: 100%;
+  min-width: 275px;
+}
+
+.mantine-Modal-header h2 {
+  font-size: 20px !important;
+}
+
+.mantine-Modal-header button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.mantine-Input-input {
+  color: #000 !important;
+}

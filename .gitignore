@@ -1,0 +1,16 @@
+# Ignorar directorio node_modules creado por npm/yarn
+node_modules/
+pnpm-lock.yaml
+build/
+# Ignorar archivos de dependencias generados por herramientas
+package-lock.json
+yarn.lock
+
+# Ignorar archivos de caché y configuración
+.cache
+.eslintcache
+.pnp
+.pnp.js
+
+# Ignorar archivos de IDE o editor
+.vscode/

@@ -1,0 +1,127 @@
+.container-productos {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content auto;
+  gap: 10px;
+  margin: auto;
+  .header-p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+      text-align: center;
+    }
+  }
+  .body-p {
+    margin: auto;
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 50% 25%;
+
+    .graf-prod {
+      height: 100%;
+      max-height: 400px;
+      display: grid;
+      grid-template-rows: 20px calc(100% - 20px);
+      h1 {
+        text-align: center;
+        font-size: 17px;
+      }
+    }
+    .list-products {
+      width: 100%;
+      max-height: 500px;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: min-content 50px;
+      gap: 10px;
+
+      $hTabla: 320px;
+      $hHeader: 34px;
+      .table-wrapper {
+        width: max-content;
+        height: $hTabla;
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        display: grid;
+        margin: auto;
+        border: 1px solid silver;
+      }
+
+      .sticky-table {
+        border-collapse: collapse;
+        border: 1px solid silver;
+        table {
+          width: 300px;
+        }
+
+        table,
+        td {
+          border-collapse: collapse;
+          border: 1px solid #000;
+        }
+
+        thead {
+          display: table;
+          width: 450px;
+          height: $hHeader;
+          tr {
+            th {
+              background-color: #6cb199;
+              color: #fff;
+              padding: 5px;
+              text-align: center;
+              position: sticky;
+              top: 0;
+              z-index: 10;
+            }
+          }
+        }
+
+        tbody {
+          display: block; /* to enable vertical scrolling */
+          max-height: calc($hTabla - $hHeader); /* e.g. */
+          overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+          scrollbar-width: none;
+          tr {
+            td {
+              padding: 5px;
+              text-align: center;
+              border-bottom: 1px solid #ddd;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+            &:hover {
+              background-color: rgb(226, 202, 105);
+            }
+          }
+        }
+
+        th,
+        td {
+          width: 33.33%; /* to enable "word-break: break-all" */
+          padding: 5px;
+          border: none;
+          word-break: break-all; /* 4. */
+        }
+
+        tr {
+          display: table; /* display purpose; th's border */
+          width: 100%;
+        }
+      }
+      .action-t {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

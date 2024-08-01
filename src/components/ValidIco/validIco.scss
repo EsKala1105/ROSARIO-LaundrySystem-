@@ -1,0 +1,14 @@
+.ico-req {
+    margin: 0 !important;
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+    color: #ffaf00;
+    font-size: 24px;
+    &:hover .info-req {
+        display: block;
+    }
+    i {
+        margin: 0;
+    }
+}

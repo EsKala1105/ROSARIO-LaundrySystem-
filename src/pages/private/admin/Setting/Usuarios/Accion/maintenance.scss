@@ -1,0 +1,78 @@
+.form-usuarios {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  .h-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 8px;
+      background: transparent;
+      outline: none;
+      border: 1px solid #6d6d6d;
+      border-radius: 5px;
+      &:hover {
+        background: linear-gradient(50deg, rgba(255, 178, 46, 1), red);
+        border: none;
+        .cancel-edit {
+          fill: #fff;
+        }
+      }
+      .cancel-edit {
+        width: 100%;
+        height: 18px;
+        fill: #444444;
+        cursor: pointer;
+      }
+    }
+  }
+  .parallel-bars {
+    display: flex;
+  }
+  .input-item {
+    position: relative;
+    width: calc(100% - 25px);
+    max-width: 300px;
+  }
+  .account {
+    background: #fff;
+    border: silver 1px solid;
+    padding: 10px 15px;
+    display: grid;
+    margin: 15px 0;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    padding-right: 0;
+    justify-content: start;
+    width: 100%;
+    .input-item {
+      width: calc(100% - 25px);
+      min-width: 100px;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .form-usuarios {
+    .parallel-bars {
+      display: grid !important;
+    }
+  }
+}
+
+.portal-action-usuario {
+  display: grid;
+  gap: 10px;
+  .action {
+    display: flex;
+    gap: 25px;
+  }
+}

@@ -1,0 +1,103 @@
+.content-productos {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  width: max-content;
+  margin: auto;
+  .mantine-1uz2t49 {
+    scrollbar-width: none;
+  }
+
+  .actions-p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    $wButton: 100px;
+    $hButton: 45px;
+    .b-add-p {
+      width: max-content;
+      height: min-content;
+      font-family: "Nunito", sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      background: #6582ff;
+      border-radius: 30px;
+      border: none;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px 15px;
+      &:hover,
+      &:focus {
+        background: #6582ff;
+        color: #fff;
+      }
+      &:hover::before,
+      &:focus::before {
+        animation: none;
+        display: none;
+      }
+      &::after {
+        content: "";
+        border-radius: 1000px;
+        width: 97%;
+        height: 97%;
+        border: 2px solid #4868f9;
+        box-shadow: 0 0 20px #6582ff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: infinite ring 2s;
+      }
+      &:hover::after,
+      &:focus::after {
+        opacity: 1;
+      }
+      @keyframes ring {
+        0%,
+        100% {
+          box-shadow: 0px 0px 40px #6582ff;
+        }
+        50% {
+          box-shadow: 0px 0px 0px;
+        }
+      }
+    }
+  }
+}
+.portal-action-servicio {
+  display: grid;
+  gap: 10px;
+  padding: 5px 33px 0px 9px;
+  .action {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+  }
+}
+
+.portal-notificacion-promociones {
+  background-color: #ffcccb;
+  border: 1px solid #ff4444;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    color: #d8000c;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+  }
+}

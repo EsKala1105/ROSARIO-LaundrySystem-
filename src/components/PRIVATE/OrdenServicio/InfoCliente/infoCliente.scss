@@ -1,0 +1,65 @@
+.info-cliente {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: max-content auto;
+  height: min-content;
+  .title {
+    padding: 0 5px;
+  }
+  .body {
+    border-radius: 20px;
+    border: solid 2px silver;
+    width: max-content;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 20px 0;
+    padding-top: 10px;
+
+    .tipo-registro-cli {
+      display: flex;
+      margin: auto;
+      padding: 10px 15px;
+      gap: 10px;
+      justify-content: space-between;
+      position: relative;
+      padding-top: 0;
+      .btn-update-info-user {
+        position: absolute;
+        right: 30px;
+        top: -8px;
+        border-radius: 0px 0px 0 5px;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        i {
+          font-size: 13px;
+          padding-left: 2px;
+        }
+      }
+      .btn-cancel-filter {
+        position: absolute;
+        right: 0px;
+        top: -8px;
+        border-radius: 0px 0px 0 5px;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+      }
+    }
+    .input-info {
+      padding: 0 20px;
+    }
+
+    .input-info-required {
+      position: relative;
+      width: calc(100% - 45px);
+      padding: 0 10px 0 20px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: silver;
+    }
+  }
+}

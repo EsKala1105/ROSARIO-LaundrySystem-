@@ -1,0 +1,28 @@
+.action-promotion {
+  display: grid;
+  gap: 10px;
+  h1 {
+    text-align: center;
+  }
+  .switch-option {
+    display: flex;
+    justify-content: space-around;
+  }
+  .body-ct {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    .lateral {
+      width: 80%;
+      height: max-content;
+      display: grid;
+      gap: 10px;
+      .input-item {
+        position: relative;
+      }
+    }
+  }
+  .btn-save {
+    width: 200px;
+    margin: 10px auto;
+  }
+}

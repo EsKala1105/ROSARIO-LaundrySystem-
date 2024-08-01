@@ -1,0 +1,73 @@
+.info-promocion {
+  border: 1px solid silver;
+  border-radius: 15px;
+  width: 100%;
+  display: grid;
+  height: max-content;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  .head-title {
+    padding: 10px;
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background-color: silver;
+  }
+  .list-promociones {
+    padding: 10px 20px;
+    display: grid;
+    gap: 15px;
+    .card-promo {
+      border: 1px solid silver;
+      border-radius: 15px;
+      padding: 10px;
+      display: grid;
+      position: relative;
+
+      .delete-promo {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        border-radius: 0 10px 0 5px;
+        border: 0px solid silver;
+        background-color: rgb(89, 89, 89);
+        color: #fff;
+        &:hover {
+          background-color: rgb(249, 132, 132);
+        }
+      }
+      span {
+        font-weight: 600;
+        font-size: 17px;
+      }
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
+      .extra-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    }
+  }
+  .footer-promo {
+    padding: 20px;
+    .total-point {
+      border: 1px solid silver;
+      border-radius: 10px;
+      width: max-content;
+      padding: 10px 20px;
+      margin: auto;
+      display: grid;
+      place-items: center;
+    }
+  }
+}

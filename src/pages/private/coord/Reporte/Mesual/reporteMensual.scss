@@ -1,0 +1,124 @@
+.content-inform-m {
+  width: 100%;
+  display: grid;
+  margin: auto;
+  max-width: 890px;
+  height: 100%;
+  padding: 15px;
+  grid-template-rows: min-content max-content auto;
+
+  .title-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filter-date {
+    display: flex;
+    place-items: center;
+    gap: 20px;
+    padding: 10px;
+    align-items: flex-start;
+    .setting-tabla {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      .accion {
+        height: 100%;
+        margin: auto;
+        padding-top: 24px;
+        margin-top: 4px;
+        button {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .container-informe {
+    position: relative;
+    width: 100%;
+
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    display: grid;
+    .informe-body {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .table-container {
+        height: 100%;
+        table {
+          zoom: 0.8;
+          border-collapse: collapse;
+          table-layout: fixed;
+          margin: 10px auto;
+          height: 97%;
+          tr {
+            position: relative;
+            display: grid;
+          }
+          thead {
+            tr {
+              th {
+                background: #5b81ea;
+                color: #fff;
+                font-weight: bold;
+                padding: 10px;
+                //border: 1px solid #4671ea;
+                text-align: center;
+                font-size: 18px;
+              }
+            }
+          }
+
+          tbody {
+            display: block;
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            &::-webkit-scrollbar {
+              width: 0;
+            }
+            tr {
+              &:nth-child(even) {
+                background: #f3f1f1cc;
+              }
+              &:hover {
+                background: #5161ce !important;
+                color: #ffffff !important;
+              }
+              td {
+                position: relative;
+                padding: 10px 5px;
+                border: 1px solid #4672ea79;
+                text-align: center;
+                font-size: 14px;
+                vertical-align: top;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .txtCantidad {
+                  width: 65px;
+                  height: 28px;
+                  font-size: 18px;
+                  border-radius: 7px;
+                  border: none;
+                  text-align: center;
+                }
+                label {
+                  margin: auto;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

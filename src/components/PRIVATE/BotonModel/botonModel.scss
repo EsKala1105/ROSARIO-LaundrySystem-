@@ -1,0 +1,44 @@
+.btn-model {
+    position: relative;
+    height: 50px;
+    width: 130px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    background: #5b81ea3a;
+    overflow: hidden;
+    transition: 0.6s;
+    color: #206592;
+    border-color: #206592;
+    &:active {
+        transform: translateY(5px);
+    }
+    &:hover,
+    &:focus {
+        background: #28cf81;
+        color: #f2f2f2;
+    }
+}
+
+.clicked {
+    background: #28cf81bd !important;
+    color: #fff;
+    &:focus,
+    &:hover {
+        font-size: 14px;
+    }
+}
+
+.unclicked {
+    background: #ff5d5db3 !important;
+    color: #fff;
+    &:focus,
+    &:hover {
+        background: #ee1515b2 !important;
+        font-size: 13px;
+    }
+}

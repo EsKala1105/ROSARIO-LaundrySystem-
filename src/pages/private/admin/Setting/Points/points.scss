@@ -1,0 +1,16 @@
+.content-setting-point {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    .form-point {
+        height: min-content;
+        padding: 10px 20px;
+        border: solid 1px silver;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+        button {
+            margin: 20px 0;
+        }
+    }
+}

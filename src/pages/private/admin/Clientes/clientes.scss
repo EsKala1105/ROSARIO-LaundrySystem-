@@ -1,0 +1,144 @@
+.content-clientes {
+  margin: auto;
+  padding: 0 20px;
+  gap: 20px;
+
+  .body-clientes {
+    margin: 0 auto;
+    gap: 15px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: clamp(300px, calc(100% - 320px), 810px) 305px;
+    .list-clientes {
+      display: grid;
+
+      width: 100%;
+      gap: 20px;
+      .header-cli {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .detail-cliente {
+      display: grid;
+      grid-template-rows: 35px max-content;
+      gap: 10px;
+      width: min-content;
+      margin: auto;
+
+      $wTabla: 300px;
+      $hTabla: 320px;
+      $hHeader: 34px;
+      .title-detail {
+        font-size: 23px;
+        font-weight: 600;
+        color: #5a5a5a;
+        margin: auto;
+      }
+      .table-wrapper {
+        width: max-content;
+        height: $hTabla;
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        display: grid;
+        margin: auto;
+        border: 1px solid silver;
+      }
+
+      .sticky-table {
+        border-collapse: collapse;
+        border: 1px solid silver;
+        table {
+          width: $wTabla;
+        }
+
+        table,
+        td {
+          border-collapse: collapse;
+          border: 1px solid #000;
+        }
+
+        thead {
+          display: table;
+          width: $wTabla;
+          height: $hHeader;
+          tr {
+            th {
+              background-color: #6cb199;
+              color: #fff;
+              padding: 5px;
+              text-align: center;
+              position: sticky;
+              top: 0;
+              z-index: 1;
+            }
+          }
+        }
+
+        tbody {
+          display: block; /* to enable vertical scrolling */
+          max-height: calc($hTabla - $hHeader); /* e.g. */
+          overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+          scrollbar-width: none;
+          tr {
+            td {
+              padding: 5px;
+              text-align: center;
+              border-bottom: 1px solid #ddd;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+            &:hover {
+              background-color: rgb(226, 202, 105);
+            }
+          }
+        }
+
+        th,
+        td {
+          width: 33.33%; /* to enable "word-break: break-all" */
+          padding: 5px;
+          border: none;
+          word-break: break-all; /* 4. */
+        }
+
+        tr {
+          display: table; /* display purpose; th's border */
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.form-cliente {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+  width: 300px;
+  .mantine-InputWrapper-root {
+    width: 230px;
+  }
+  .info-puntaje {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #6cb199;
+    color: #fff;
+    span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .content-clientes {
+    .body-clientes {
+      grid-template-columns: none;
+      gap: 20px;
+    }
+  }
+}

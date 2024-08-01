@@ -1,0 +1,39 @@
+.action-service {
+    width: max-content;
+    h1 {
+        font-size: 20px;
+        color: #6b6b6b;
+        text-align: center;
+    }
+    .info-s {
+        display: grid;
+        grid-template-rows: max-content max-content;
+        gap: 20px;
+        padding: 0 20px;
+        .body-s {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 20px;
+            .col-s {
+                min-width: 250px;
+                padding: 10px;
+                width: 95%;
+                display: grid;
+                height: max-content;
+                .inp-s {
+                    position: relative;
+                }
+                .i-state {
+                    margin: 10px 0;
+                    label {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .b-add {
+            width: 300px;
+            margin: auto;
+        }
+    }
+}

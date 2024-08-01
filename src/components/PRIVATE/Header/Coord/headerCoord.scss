@@ -1,0 +1,300 @@
+.header-general {
+  //width: 100%;
+  height: 62.5px;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 100px;
+  position: relative;
+  .logo {
+    position: absolute;
+    border-radius: 0 0 51px 0;
+    left: 0;
+    top: 0;
+    background: var(--primary-color);
+    display: flex;
+    padding: 0 10px;
+    // LOGO --------------->
+    .svg-logo {
+      width: min-content;
+      height: 100%;
+      max-height: 63px;
+      fill: #fff;
+      stroke: #fff;
+      z-index: 11;
+    }
+    // LOGO --------------->
+  }
+  .coord-style {
+    height: 62.5px;
+    width: 208px;
+  }
+  .admin-style {
+    height: 112px;
+    width: 290px;
+    z-index: 11;
+  }
+  .hamburger {
+    display: none;
+    outline: none;
+    border: solid 1px silver;
+    background: none;
+    height: 44px !important;
+    .line {
+      transition: 0.5s;
+    }
+    &.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .line:nth-child(1) {
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    &.active .line:nth-child(3) {
+      transform: translateY(-10px) rotate(45deg);
+    }
+  }
+  .nav-bar {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      height: 62.5px;
+      max-height: 62.5px;
+      .hori-selector {
+        display: inline-block;
+        position: absolute;
+        max-height: 53.5px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 9px;
+        .right,
+        .left {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          bottom: 0;
+        }
+        .right:before,
+        .left:before {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: var(--primary-color);
+        }
+        .right:before {
+          bottom: 0;
+          right: -25px;
+        }
+        .left:before {
+          bottom: 0;
+          left: -25px;
+        }
+        .right {
+          right: -25px;
+        }
+        .left {
+          left: -25px;
+        }
+      }
+      .content-account {
+        display: flex;
+        place-content: center;
+        color: #fff;
+        width: 100px;
+        height: 62.5px;
+
+        &:hover > .btn-account > img {
+          filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7))
+            drop-shadow(4px 8px 12px rgba(255, 255, 255, 0.5));
+          transform: scale(1.1);
+        }
+      }
+      li {
+        height: max-content;
+        max-height: 55.99px;
+        a {
+          display: block;
+          color: #fff;
+          font-size: 16px;
+          padding: 13.5px;
+          border-radius: 50px;
+          transition: 0.2s;
+          margin: 0 5px;
+          position: relative;
+          outline: none;
+        }
+      }
+      .active {
+        background-color: transparent;
+        transition: all 0.7s;
+        a,
+        button {
+          color: var(--primary-color);
+        }
+      }
+      .pages-admin {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .header-general {
+    padding: 0 50px;
+    .nav-bar {
+      ul {
+        .hori-selector-2 {
+          margin-top: 10px;
+        }
+        li {
+          a {
+            padding: 16px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .header-general {
+    padding: 0 30px;
+    .nav-bar {
+      ul {
+        .hori-selector-2 {
+          margin-top: 10px;
+        }
+        li {
+          a {
+            // font-size: 15px;
+            padding: 20px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-general {
+    .logo {
+      height: 100%;
+      width: 213px;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+      }
+    }
+    .nav-bar {
+      height: 0;
+      position: absolute;
+      top: 62.5px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: var(--primary-color);
+      transition: 0.5s;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 11;
+      ul {
+        max-height: 100%;
+        height: 577px;
+        display: grid;
+        width: 100%;
+        text-align: left;
+        transition: 0.5s;
+        opacity: 0;
+        padding-bottom: 10px;
+        .content-account {
+          padding: 16px 30px;
+          margin: 0 5px;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          width: calc(100% - 10px);
+          height: 62.5px;
+          gap: 15px;
+          justify-content: flex-start;
+          transition: box-shadow 0.3s ease;
+          &::after {
+            content: "Informacion de Cuenta";
+          }
+          &:hover {
+            box-shadow: 0 0 10px 5px rgba(255, 34, 34, 0.7);
+          }
+        }
+        .hori-selector {
+          margin-top: 0px;
+          margin-left: 10px;
+          border-radius: 0;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          .right,
+          .left {
+            right: 10px;
+          }
+          .right:before {
+            bottom: -25px;
+            left: -25px;
+          }
+          .left:before {
+            left: -25px;
+            top: -25px;
+          }
+          .right {
+            bottom: -25px;
+          }
+          .left {
+            top: -25px;
+            left: auto;
+          }
+        }
+        li {
+          a {
+            padding: 16px 30px;
+          }
+        }
+        .pages-admin {
+          display: block;
+        }
+      }
+    }
+    .active {
+      height: calc(100vh - 62.5px);
+      max-height: 572px;
+      ul {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-height: 700px) {
+  .header-general {
+    .nav-bar {
+    }
+  }
+}

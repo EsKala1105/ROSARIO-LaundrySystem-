@@ -1,0 +1,20 @@
+.gastos {
+  .fila {
+    &:hover {
+      background: rgba(237, 196, 196, 0.384) !important;
+    }
+  }
+  .delete-row {
+    .ic-d {
+      width: 18px;
+      height: 18px;
+      fill: #4b4b4b;
+      cursor: pointer;
+    }
+    &:hover {
+      .ic-d {
+        fill: #f88888;
+      }
+    }
+  }
+}

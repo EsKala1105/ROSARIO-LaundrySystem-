@@ -1,0 +1,27 @@
+.cr_anulados {
+  display: grid;
+  grid-template-rows: 80px 60px;
+  gap: 20px;
+  place-items: center;
+  padding-top: 20px;
+  width: 400px;
+  .title {
+    width: 100%;
+    font-size: 18px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+  .xport-xsls {
+    outline: none;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background: #5d605e;
+    color: #fff;
+    &:hover {
+      background: #47e18e;
+    }
+  }
+}

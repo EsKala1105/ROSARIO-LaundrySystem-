@@ -1,0 +1,65 @@
+.btn-account {
+  width: 50px;
+  color: #fff;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ico-account {
+    width: 80%;
+    object-fit: cover;
+    transition: filter 0.3s, transform 0.3s;
+  }
+}
+
+.space-data {
+  display: grid;
+  gap: 10px;
+  .menu-login {
+    display: flex;
+    gap: 15px;
+    place-items: center;
+    .avatar-space {
+      .ico-avatar {
+        width: 45px;
+        display: flex;
+        border-radius: 50%;
+        border: 1px solid #474747;
+      }
+    }
+    .info-user {
+      display: grid;
+      line-height: 1;
+      gap: 2px;
+      span {
+        font-size: 14px;
+        margin: 0;
+      }
+      .d-primary {
+        font-weight: 600;
+        color: #333333;
+      }
+      .d-extra {
+        color: #949494;
+      }
+      .d-secundary {
+        color: #1bc478;
+      }
+    }
+  }
+  .btn-logout {
+    width: min-content;
+    margin: auto;
+  }
+}
+.menu-login {
+  color: #000;
+}
+
+.mantine-Popover-dropdown {
+  box-shadow: 0 0 10px 5px rgba(136, 136, 136, 0.7) !important;
+}

@@ -1,0 +1,106 @@
+.info-pagos {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: max-content auto;
+  .title {
+    padding: 0 5px;
+  }
+  .body {
+    border-radius: 20px;
+    border: solid 2px silver;
+    width: max-content;
+    min-width: 268px;
+    padding: 20px 10px;
+    height: max-content;
+    position: relative;
+    display: grid;
+    padding-top: 30px;
+    gap: 20px;
+    .card-pago {
+      background: #b2ffd880;
+      width: 230px;
+      margin: auto;
+      position: relative;
+      border-radius: 20px;
+      border: solid 2px silver;
+      text-align: center;
+      display: grid;
+      .btn-action {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        position: absolute;
+        top: -10px;
+        i {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+      .sn-sm {
+        position: absolute;
+        left: calc(50% - 70px);
+        padding: 5px 10px;
+        text-align: center;
+        border: 1px solid silver;
+        border-radius: 10px;
+        top: -10px;
+        font-weight: 500;
+        background: #fff;
+      }
+      .mm-pago {
+        padding: 10px;
+        padding-top: 20px;
+        .monto-p {
+          background: #fff;
+          border-radius: 5px;
+          border: solid 2px silver;
+          width: 45px;
+          height: 45px;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 800;
+          color: #575757;
+        }
+        .metodo-p {
+          font-weight: 800;
+          color: #575757;
+          text-transform: uppercase;
+        }
+      }
+      .btn-edit {
+        right: -10px;
+
+        background: #f4c671;
+        &:hover {
+          background: #f7a815;
+        }
+      }
+      .btn-delete {
+        left: -10px;
+        background: #f87474;
+        &:hover {
+          background: #fd3f3f;
+        }
+      }
+      hr {
+        margin: 0;
+      }
+      .date-p {
+        font-weight: 500;
+        color: #575757;
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+        background: #fff;
+        border-radius: 0 0 18px 18px;
+      }
+    }
+    span {
+      margin: auto;
+      margin-top: -10px;
+    }
+  }
+}

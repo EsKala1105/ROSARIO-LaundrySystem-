@@ -1,0 +1,203 @@
+.radio-wrapper {
+    width: 145px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    border: #757575 solid 1px;
+    border-radius: 30px;
+    position: relative;
+    margin-left: 1%;
+    p {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        font-size: 1.7em;
+        margin: 0;
+        margin-top: 13px;
+    }
+    .correct {
+        left: 17px;
+        top: -5px;
+    }
+    .wrong {
+        right: 17px;
+        top: -5px;
+    }
+    .neutral-icon {
+        left: 69px;
+        top: -8px;
+        opacity: 0.5;
+    }
+    label {
+        z-index: 9;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+i {
+    z-index: 99;
+    font-size: 18px;
+}
+
+$cNeutral: #ffe597;
+$cOFF: #ff9797;
+$cON: #9ffeca;
+$sizeR: 47px;
+
+.neutral-icon i {
+    font-size: 10px;
+}
+.neutral + label {
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    position: absolute;
+    left: 33%;
+    transition: transform 1s;
+}
+
+.IC:checked + label {
+    border: 1px solid #757575;
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    background: $cNeutral;
+    background: -moz-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $cNeutral), color-stop(100%, $cNeutral));
+    background: -webkit-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -o-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -ms-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: linear-gradient(to bottom, $cNeutral 0%, $cNeutral 100%);
+    -moz-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -moz-animation-name: LefToCenter;
+    -webkit-animation-name: LefToCenter;
+    animation-name: LefToCenter;
+}
+
+.DC:checked + label {
+    border: 1px solid #757575;
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    background: $cNeutral;
+    background: -moz-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $cNeutral), color-stop(100%, $cNeutral));
+    background: -webkit-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -o-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: -ms-linear-gradient(top, $cNeutral 0%, $cNeutral 100%);
+    background: linear-gradient(to bottom, $cNeutral 0%, $cNeutral 100%);
+    -moz-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -moz-animation-name: RightToCenter;
+    -webkit-animation-name: RightToCenter;
+    animation-name: RightToCenter;
+}
+
+.yes + label {
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.yes:checked + label {
+    border: 1px solid #757575;
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    background: $cOFF;
+    background: -moz-linear-gradient(top, $cOFF 0%, $cOFF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $cOFF), color-stop(100%, $cOFF));
+    background: -webkit-linear-gradient(top, $cOFF 0%, $cOFF 100%);
+    background: -o-linear-gradient(top, $cOFF 0%, $cOFF 100%);
+    background: -ms-linear-gradient(top, $cOFF 0%, $cOFF 100%);
+    background: linear-gradient(to bottom, $cOFF 0%, $cOFF 100%);
+    -moz-animation-duration: 0.4s;
+    -moz-animation-name: slidein;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slidein;
+    animation-duration: 0.4s;
+    animation-name: slidein;
+}
+
+.no + label {
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.no:checked + label {
+    border: 1px solid #757575;
+    display: inline-block;
+    width: $sizeR;
+    height: $sizeR;
+    border-radius: 50%;
+    background: $cON;
+    -moz-animation-duration: 0.4s;
+    -moz-animation-name: slideno;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slideno;
+    animation-duration: 0.4s;
+    animation-name: slideno;
+    background: $cON;
+    background: -moz-linear-gradient(top, $cON 0%, $cON 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $cON), color-stop(100%, $cON));
+    background: -webkit-linear-gradient(top, $cON 0%, $cON 100%);
+    background: -o-linear-gradient(top, $cON 0%, $cON 100%);
+    background: -ms-linear-gradient(top, $cON 0%, $cON 100%);
+    background: linear-gradient(to bottom, $cON 0%, $cON 100%);
+}
+
+@keyframes slidein {
+    from {
+        transform: translate(50px, 0);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes slideno {
+    from {
+        transform: translate(-50px, 0);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes LefToCenter {
+    from {
+        transform: translate(-50px, 0);
+    }
+    to {
+        transform: translate(0px, 0);
+    }
+}
+
+@keyframes RightToCenter {
+    from {
+        transform: translate(50px, 0);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}

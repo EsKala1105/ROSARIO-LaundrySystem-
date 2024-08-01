@@ -1,0 +1,171 @@
+.note-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .sticky-note {
+        width: 300px;
+        min-height: 250px;
+        font-size: 20px;
+        outline: none;
+        position: relative;
+        margin: 30px 10px;
+        padding: 40px 20px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            border-width: 12px 12px 12px 12px;
+            border-style: solid;
+        }
+
+        &.sticky-note-one {
+            background-color: #fae3e3;
+            box-shadow: 9px 0px 10px -5px rgba(0, 0, 0, 0.42);
+
+            &::before {
+                background-color: rgba(108, 212, 255, 0.6);
+                width: 120px;
+                height: 35px;
+                left: 50%;
+                top: -15px;
+                transform: translateX(-50%) rotate(3deg);
+            }
+            &::after {
+                left: 0;
+                border-top-color: #51c0ef;
+                border-right-color: #51c0ef;
+                border-bottom-color: #fff;
+                border-left-color: #fff;
+            }
+        }
+
+        .body-stick {
+            display: grid;
+            gap: 20px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+
+            .note {
+                display: grid;
+                textarea {
+                    width: 100%;
+                    margin: 0;
+                    height: 100px;
+                    background: #bee7f9;
+                    transition: all 0.7s;
+                    resize: none;
+                    font-size: 15px;
+                    padding: 10px;
+                    //overflow: hidden;
+                    border: solid 1px silver;
+                    border-top: 0;
+                    outline: none;
+                    text-align: justify;
+
+                    &::-webkit-scrollbar {
+                        width: 0;
+                        height: 0;
+                        display: none;
+                    }
+
+                    &.hide {
+                        height: 0;
+                        visibility: hidden;
+                        transition: all 0.7s;
+                        padding: 0 10px;
+                    }
+                }
+
+                .header-info {
+                    display: flex;
+                    justify-content: space-between;
+                    background: #fbfdba;
+                    padding: 5px 10px;
+                    border-radius: 10px 10px 0 0;
+                    border: solid 1px silver;
+
+                    button {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: none;
+                        color: #fff;
+                        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+                        &:hover {
+                            background: #62c180;
+                        }
+                    }
+
+                    .btn-delete {
+                        background: #636363;
+                        &:hover {
+                            background: #ee6e6e;
+                        }
+                    }
+
+                    .color-show {
+                        background: #50a5ef;
+                    }
+
+                    .color-hide {
+                        background: #5d5d5d;
+                    }
+                }
+                .remplazo-text-area {
+                    width: 260px;
+                    padding: 10px;
+                    background: #bee7f9;
+                    font-size: 15px;
+                    overflow: hidden; /* Puedes ajustar esto según tus necesidades */
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .btn-add {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            right: -25px;
+            bottom: -25px;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #cbd2ff;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            color: #fff;
+
+            &:hover {
+                background-color: #7686ef;
+            }
+        }
+    }
+    .btn-actions {
+        width: 100%;
+        background: #fff;
+        bottom: 0;
+        height: 70px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: solid 1px silver;
+        gap: 20px;
+    }
+}

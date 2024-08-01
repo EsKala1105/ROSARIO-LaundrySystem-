@@ -1,0 +1,127 @@
+.header-exclusivo {
+  height: 50px;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 100px;
+  .nav-bar-admin {
+    position: relative;
+    height: 100%;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+      height: max-content;
+      .hori-selector-2 {
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        max-height: 43px;
+        top: 0px;
+        left: 0px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        background-color: #fff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        margin-top: 7px;
+        .right,
+        .left {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          bottom: 0;
+        }
+        .right:before,
+        .left:before {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: var(--secondary-color);
+        }
+        .right:before {
+          bottom: 0;
+          right: -20px;
+        }
+        .left:before {
+          bottom: 0;
+          left: -20px;
+        }
+        .right {
+          right: -20px;
+        }
+        .left {
+          left: -20px;
+        }
+      }
+      li {
+        height: max-content;
+        a {
+          display: block;
+          color: #fff;
+          font-size: 16px;
+          padding: 7.5px 20px;
+          border-radius: 50px;
+          transition: 0.2s;
+          margin: 0 5px;
+          position: relative;
+          outline: none;
+        }
+      }
+      .active {
+        background-color: transparent;
+        transition: all 0.7s;
+
+        a {
+          color: var(--secondary-color) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .header-exclusivo {
+    padding: 0 50px;
+    .nav-bar-admin {
+      ul {
+        .hori-selector-2 {
+          //margin-top: 10px;
+        }
+        li {
+          a {
+            // font-size: 20px;
+            padding: 10px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .header-exclusivo {
+    padding: 0 30px;
+    .nav-bar-admin {
+      ul {
+        li {
+          a {
+            // font-size: 15px;
+            padding: 13.8px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header-exclusivo {
+    display: none;
+  }
+}

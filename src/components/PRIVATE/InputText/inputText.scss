@@ -1,0 +1,90 @@
+.input-text-my {
+    width: 100%;
+    height: 25px;
+    position: relative;
+    margin-top: 22px;
+    .ico-req {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #ffaf00;
+        font-size: 24px;
+        &:hover .info-req {
+            display: block;
+        }
+        i {
+            margin: 0;
+            .info-req {
+                display: none;
+                width: max-content;
+                position: absolute;
+                top: -24px;
+                left: 0;
+                background: #fff;
+                z-index: 1;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 17px;
+                color: #000;
+                font-family: roboto;
+                border: solid 1px silver;
+                font-weight: 100;
+            }
+        }
+    }
+    input {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        font-size: 17px;
+        color: #7a7dbb;
+        border-bottom: 2px solid #7a7dbb;
+        padding: 0;
+        &:focus ~ label,
+        &.has-value ~ label {
+            transform: translateY(-30px);
+            font-size: 15px;
+            color: #3d44c9;
+            margin-bottom: 0;
+        }
+
+        &:focus ~ .underline::before,
+        &.has-value ~ .underline::before {
+            transform: scaleX(1);
+            background: #343bbe;
+        }
+    }
+
+    label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: grey;
+        pointer-events: none;
+        transition: all 0.3s ease;
+
+        &.active {
+            transform: translateY(-25px);
+            font-size: 15px;
+            color: #3d44c9;
+        }
+    }
+
+    .underline {
+        position: absolute;
+        bottom: -1.5px;
+        height: 2px;
+        width: 100%;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: #343bbe;
+            transform: scaleX(0);
+            transition: all 0.3s ease;
+        }
+    }
+}

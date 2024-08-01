@@ -1,0 +1,201 @@
+.content-almacen {
+    display: grid;
+    place-items: center;
+    .list-a {
+        width: 1100px;
+        display: grid;
+        gap: 10px;
+        .ico-detail {
+            width: 40px;
+
+            height: 40px;
+            &:hover {
+                filter: drop-shadow(0 0 10px #f4843af2);
+            }
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            //padding: 0 10px;
+            $wButton: 100px;
+            $hButton: 45px;
+            $cPry: #313133;
+            $cSec: #313133;
+
+            $wBExport: 30px;
+            $wBspace: 175px;
+            .button_wrapper {
+                position: relative;
+                align-items: center;
+                width: $wBspace;
+                height: 40px;
+                border-radius: 10rem;
+                background-color: #3a9950;
+                font-size: 13px;
+                color: white;
+                border: none;
+                display: flex;
+                letter-spacing: 0.1em;
+                font-weight: 200;
+                overflow: hidden;
+                box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.25);
+                z-index: 10;
+                padding: 5px;
+                margin: 0;
+                cursor: pointer;
+                transition: 300ms;
+                &:hover {
+                    transform: scale(110%);
+                    &::before {
+                        padding-top: 0px !important;
+                    }
+                }
+
+                &::before {
+                    content: "DESCARGANDO";
+                    position: absolute;
+                    background-color: white;
+                    height: $wBExport;
+                    width: $wBExport;
+                    color: #3a9950;
+                    display: flex;
+                    padding: 0 10px;
+                    left: 4px;
+                    border-radius: 10rem;
+                    align-items: center;
+                    overflow: hidden;
+                    padding-left: 10px;
+                    padding-top: 3px;
+                    box-sizing: border-box;
+                }
+                &::after {
+                    content: "Exportar";
+                    height: 100%;
+                    border-radius: 10rem;
+                    display: flex;
+                    align-items: center;
+                    margin: auto;
+                }
+                .icon {
+                    position: absolute;
+                    display: flex;
+                    overflow: hidden;
+                    width: $wBExport;
+                    height: $wBExport;
+                    border-radius: 100%;
+
+                    background-color: white;
+                    color: #3a9950;
+
+                    > svg {
+                        padding: 5px;
+                        transition: 300ms;
+                    }
+                }
+            }
+            .loading {
+                &:before {
+                    animation: reveal 1s ease-in-out 300ms forwards;
+                }
+                .icon {
+                    left: 5px;
+                    animation: loadIcon 1s ease-in-out 300ms forwards;
+                    > svg {
+                        transform: rotatez(-90deg);
+                    }
+                }
+            }
+            @keyframes loadIcon {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(calc($wBspace - 40px));
+                    left: 0;
+                }
+            }
+            @keyframes reveal {
+                0% {
+                    width: $wBExport;
+                    left: 5px;
+                }
+                99.99% {
+                    //left: 0;
+                }
+                100% {
+                    left: 5px;
+                    right: 5px;
+                    width: calc(100% - 10px);
+                }
+            }
+            @media screen and (max-width: 500px) {
+                .button_wrapper {
+                    transform: scale(80%);
+                    &:hover {
+                        transform: scale(90%);
+                    }
+                }
+            }
+            .wrap {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3;
+                .button {
+                    min-width: $wButton;
+                    min-height: $hButton;
+                    font-family: "Nunito", sans-serif;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #fff;
+                    background: #6582ff;
+                    border-radius: 30px;
+                    border: none;
+                    transition: all 0.3s ease-in-out 0s;
+                    cursor: pointer;
+                    outline: none;
+                    position: relative;
+                    padding: 10px;
+                    &:hover,
+                    &:focus {
+                        background: #6582ff;
+                        color: #fff;
+                    }
+                    &:hover::before,
+                    &:focus::before {
+                        animation: none;
+                        display: none;
+                    }
+                    &::after {
+                        content: "";
+                        border-radius: 1000px;
+                        min-width: calc($wButton + 12px);
+                        min-height: calc($hButton + 12px);
+                        border: 2px solid #4868f9;
+                        box-shadow: 0 0 20px #6582ff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        animation: infinite ring 2s;
+                    }
+                    &:hover::after,
+                    &:focus::after {
+                        opacity: 1;
+                    }
+                    @keyframes ring {
+                        0%,
+                        100% {
+                            box-shadow: 0px 0px 40px #6582ff;
+                        }
+                        50% {
+                            box-shadow: 0px 0px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.info-descuento {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: max-content auto;
+  max-width: 268px;
+  .title {
+    padding: 0 5px;
+  }
+  .body {
+    border-radius: 20px;
+    border: solid 2px silver;
+    width: max-content;
+    min-width: 268px;
+    padding: 20px 10px;
+    height: max-content;
+    position: relative;
+    display: grid;
+    .cancel-descuento {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 0 15px 0 5px;
+      background: #616161;
+      &:hover {
+        background: rgb(252, 145, 145);
+      }
+    }
+    .input-switch {
+      display: grid;
+      place-items: center;
+    }
+    .btn-promocion {
+      width: 90%;
+      margin: auto;
+    }
+    .group-descuento {
+      padding: 0 20px;
+      padding-bottom: 20px;
+      .mantine-Group-root {
+        display: grid;
+        input[type="radio"] {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

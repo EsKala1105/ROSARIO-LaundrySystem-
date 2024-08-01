@@ -1,0 +1,113 @@
+$wtherm: 40px;
+$bColor: #21d521;
+#thermometer {
+  width: $wtherm;
+  height: 300px;
+  margin: calc(($wtherm * 0.4));
+  position: relative;
+  background: #ddd;
+  border: none;
+  border-radius: 1000px;
+  z-index: 4;
+  &::after {
+    content: "";
+    width: calc($wtherm + ($wtherm * 0.5));
+    height: calc($wtherm + ($wtherm * 0.5));
+    background: #ddd;
+    position: absolute;
+    border-radius: 50%; /* Esto crea un círculo */
+    bottom: 0;
+    left: calc(50% - (calc($wtherm + ($wtherm * 0.5)) / 2));
+  }
+  .track {
+    height: calc(100% - (($wtherm - ($wtherm - ($wtherm * 0.3)))));
+    width: calc($wtherm - ($wtherm * 0.3));
+    top: calc(($wtherm - ($wtherm - ($wtherm * 0.3))) / 2);
+    border: none;
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    place-content: center;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    background-position: 0 -1px;
+    background-size: 100% 5%;
+    z-index: 1;
+    &:hover {
+      .goal .amount,
+      .progress .amount {
+        display: inline-block !important; /* Mostrar al pasar el mouse sobre thermometer */
+      }
+      span {
+        display: none;
+      }
+    }
+    span {
+      position: absolute;
+      bottom: 10px;
+      z-index: 2;
+      color: #3b3b3b;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .base {
+      width: calc($wtherm + ($wtherm * 0.1667));
+      height: calc($wtherm + ($wtherm * 0.1667));
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      bottom: 0;
+      left: calc(50% - (($wtherm + ($wtherm * 0.1667)) / 2));
+      overflow: hidden;
+      display: flex;
+      flex-direction: column-reverse;
+      .background {
+        background: $bColor;
+        display: flex;
+        place-items: center;
+      }
+    }
+    .goal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      .amount {
+        width: max-content;
+        display: none !important;
+        //display: inline-block !important;
+        padding: 2px 5px 2px 30px;
+        border: 1px solid goldenrod;
+        font-family: Trebuchet MS;
+        color: goldenrod;
+        background: #fff;
+        font-size: 20px;
+        border-radius: 0px 0px 10px 10px;
+        padding: 0 15px;
+        font-weight: 700;
+      }
+    }
+    .progress {
+      height: 0%;
+      width: 100%;
+      border-radius: 40px;
+      background: $bColor;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      .amount {
+        width: max-content;
+        display: none !important;
+        padding: 2px 5px 2px 30px;
+        position: absolute;
+        border: 1px solid $bColor;
+        color: $bColor;
+        font-size: 20px;
+        background: #fff;
+        border-radius: 0px 0px 10px 10px;
+        //padding: 0 15px;
+        font-weight: 700;
+      }
+    }
+  }
+}
