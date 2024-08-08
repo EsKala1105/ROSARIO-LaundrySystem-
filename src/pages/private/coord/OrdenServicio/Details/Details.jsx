@@ -306,6 +306,7 @@ const Details = ({ IdCliente }) => {
 
             <table className="info-table">
               <tbody>
+                {console.log(infoCliente)}
                 {infoCliente.cargosExtras.impuesto.estado ? (
                   <tr>
                     <td>Factura :</td>

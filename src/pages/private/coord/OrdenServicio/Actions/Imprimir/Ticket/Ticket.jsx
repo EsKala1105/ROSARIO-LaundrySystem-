@@ -197,7 +197,9 @@ const Ticket = React.forwardRef((props, ref) => {
                     <tbody>
                       <tr>
                         <td>Direccion :</td>
-                        <td>{InfoNegocio?.direccion}</td>
+                        <td style={{ lineHeight: "1" }}>
+                          {InfoNegocio?.direccion}
+                        </td>
                       </tr>
                       {InfoNegocio.contacto.length > 0 ? (
                         <tr>

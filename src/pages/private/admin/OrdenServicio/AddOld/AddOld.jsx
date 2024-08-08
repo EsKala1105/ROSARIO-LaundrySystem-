@@ -258,9 +258,11 @@ const AddOld = () => {
     let cargosExtrasUpdated;
     if (!info.cargosExtras.impuesto.estado) {
       cargosExtrasUpdated = {
-        estado: false,
-        valor: 0,
-        importe: 0,
+        impuesto: {
+          estado: false,
+          valor: 0,
+          importe: 0,
+        },
       };
     } else {
       cargosExtrasUpdated = info.cargosExtras;
