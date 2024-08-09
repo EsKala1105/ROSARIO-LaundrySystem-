@@ -294,13 +294,13 @@ const PrivateMasterLayout = (props) => {
     });
     // LOGIN
     socket.on("server:onLogin", (data) => {
-      // if (InfoUsuario._id === data) {
-      //   _handleShowModal(
-      //     "Comunicado",
-      //     "Se registro otro inicio de sesion con esta cuenta",
-      //     "double-login"
-      //   );
-      // }
+      if (InfoUsuario._id === data) {
+        _handleShowModal(
+          "Comunicado",
+          "Se registro otro inicio de sesion con esta cuenta",
+          "double-login"
+        );
+      }
     });
     // Cambio en los datos de usuario
     socket.on("server:onChangeUser", (data) => {
